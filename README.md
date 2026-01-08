@@ -1,10 +1,5 @@
 # fixitPy
 
-<div class="badges">
-<img alt="Static Badge" src="https://img.shields.io/badge/github-PyFixit-blue%3Flogo%3Dgithub?link=https%3A%2F%2Fgithub.com%2Fvoldgalf%2Ffixitpy">
-<img alt="Static Badge" src="https://img.shields.io/badge/license-MIT-blue?link=https%3A%2F%2Fgithub.com%2Fvoldgalf%2Ffixitpy%2FLICENSE">
-</div>
-  
 Interface with the iFixit API through Python, easily.
 
 ### Current Features
