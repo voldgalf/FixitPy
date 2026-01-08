@@ -1,13 +1,9 @@
 """FixitPy package."""
 
 import requests
-import logging
 
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
 
-logging.basicConfig(format="%(levelname)s:%(name)s:%(message)s")
-
-logger = logging.getLogger(__name__)
 
 def find_guide(guide_id, get_prerequisites=False):
     """
@@ -26,11 +22,9 @@ def find_guide(guide_id, get_prerequisites=False):
     response = requests.get(request_url,allow_redirects=False, timeout=5)
 
     if response.status_code != 200:
-        logger.error(f"FixitPy Request Code: {response.status_code}. Request URL: {request_url}")
         return None
 
     if 'application/json' not in response.headers.get('Content-Type', ''):
-        logger.error(f"FixitPy Content type not json: {response.status_code}")
         return None
 
     response_json = response.json()
