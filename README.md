@@ -1,7 +1,8 @@
 # fixitPy
-![Static Badge](https://img.shields.io/badge/github-fixitpy-blue%3F?link=https%3A%2F%2Fgithub.com%2Fvoldgalf%2Ffixitpy)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/voldgalf/fixitpy)
 ![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/voldgalf)
+[![PyPI](https://img.shields.io/badge/PyPI-3775A9?logo=pypi&logoColor=fff)](https://pypi.org/project/fixitpy/)
 
 Python iFixit API interface.
 
