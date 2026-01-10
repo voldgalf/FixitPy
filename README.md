@@ -9,8 +9,6 @@ Python iFixit API interface.
 Currently, you can retrieve guides and their prerequisite guides
 ## Installation
 
-To install fixitPy
-
 ````bash
 pip install fixitpy
 ````
