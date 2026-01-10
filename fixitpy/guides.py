@@ -1,9 +1,10 @@
 """FixitPy package."""
-
-import requests
 from typing import Optional
 
+import requests
+
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
+
 
 def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
     """
@@ -19,7 +20,7 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
 
     request_url = f"{IFIXIT_API_URL}/guides/{guide_id}"
 
-    response = requests.get(request_url,allow_redirects=False, timeout=5)
+    response = requests.get(request_url, allow_redirects=False, timeout=5)
 
     if response.status_code != 200:
         return {}
@@ -45,8 +46,8 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
     if get_prerequisites:
 
         for _prerequisite in response_json.get('prerequisites', []):
-            prerequisites_guide = retrieve_guide(_prerequisite.get('guideid'), get_prerequisites=False)
-            prerequisites.append(prerequisites_guide)
+            guide = retrieve_guide(_prerequisite.get('guideid'), get_prerequisites=False)
+            prerequisites.append(guide)
 
     return {"title": response_json.get("title"),
             "steps": steps,
@@ -56,8 +57,10 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
             "prerequisites": prerequisites,
             "guide_id": response_json.get("guideid")}
 
+
 if __name__ == "__main__":
-    found_guide = retrieve_guide(123,get_prerequisites=True)  # call the retrieve_guide function which returns a dict
+    found_guide = retrieve_guide(123,
+                                 get_prerequisites=True)  # call the retrieve_guide function which returns a dict
 
     print(found_guide.get("title"))
     print(found_guide.get("difficulty"))

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fixitpy"
-version = "0.2.14"
+version = "0.2.15"
 description = "iFixit REST API Interface"
 readme = "PYPI_README.md"
 license = "MIT"

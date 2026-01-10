@@ -1,7 +1,6 @@
 # fixitPy
 ![Static Badge](https://img.shields.io/badge/github-fixitpy-blue%3F?link=https%3A%2F%2Fgithub.com%2Fvoldgalf%2Ffixitpy)
 ![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
-![Static Badge](https://img.shields.io/badge/coverage-100%25-orange)
 
 Python iFixit API interface.
 
