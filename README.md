@@ -53,7 +53,7 @@ What makes a repair guide, a *guide* is the inclusion of steps to follow.
 ````py
 import fixitpy
 
-found_guide = fixitpy.retrieve_guide(123, get_prerequisites=True) # call the retrieve_guide function which returns a dict
+found_guide = fixitpy.retrieve_guide(123) # call the retrieve_guide function which returns a dict
 
 print(found_guide.get("title"))
 print(found_guide.get("difficulty"))
