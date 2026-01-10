@@ -1,16 +1,11 @@
 # fixitPy
+![Static Badge](https://img.shields.io/badge/github-fixitpy-blue%3F?link=https%3A%2F%2Fgithub.com%2Fvoldgalf%2Ffixitpy)
+![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
+![Static Badge](https://img.shields.io/badge/coverage-100%25-orange)
 
-Interface with the iFixit API through Python, easily.
+Python iFixit API interface.
 
-### Current Features
-
-- Guide Retrieval
-
-### WIP Features
-
-- Guide image retrieval
-- text based searching for guides
-
+Currently, you can retrieve guides and their prerequisite guides
 ## Installation
 
 To install fixitPy
@@ -19,9 +14,9 @@ To install fixitPy
 pip install fixitpy
 ````
 
-### Using the library
+## Using the library
 
-#### Retrieving a guide *without prerequisites*
+### Retrieving a guide *without prerequisites*
 
 This returns a dict that contains information pertaining to the guide
 
@@ -34,7 +29,7 @@ print(found_guide.get("title"))
 print(found_guide.get("difficulty"))
 ````
 
-#### Retrieving a guide *with prerequisites*
+### Retrieving a guide *with prerequisites*
 
 A prerequisite is an optional guide that the retrieved guide recommends you start with before. The prerequisite guide is the same dict structure of what returns from `fixitpy.retrieve_guide`
 
@@ -48,6 +43,23 @@ print(found_guide.get("difficulty"))
 
 first_prerequisite = found_guide.get("prerequisites")[0]
 print(first_prerequisite.get("title"))
+````
+
+### Getting Guide Steps
+
+What makes a repair guide, a *guide* is the inclusion of steps to follow.
+
+````py
+import fixitpy
+
+found_guide = fixitpy.retrieve_guide(123, get_prerequisites=True) # call the retrieve_guide function which returns a dict
+
+print(found_guide.get("title"))
+print(found_guide.get("difficulty"))
+
+for step in found_guide.get("steps"):
+    print(step.get("title")) # this is the title of each step
+    print(step.get("steps")) # this is a list of each sentence of the current step
 ````
 
 # License

@@ -55,3 +55,13 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
             "introduction": response_json.get("introduction_raw"),
             "prerequisites": prerequisites,
             "guide_id": response_json.get("guideid")}
+
+if __name__ == "__main__":
+    found_guide = retrieve_guide(123,get_prerequisites=True)  # call the retrieve_guide function which returns a dict
+
+    print(found_guide.get("title"))
+    print(found_guide.get("difficulty"))
+
+    for step in found_guide.get("steps"):
+        print(step.get("title"))
+        print(step.get("steps"))
