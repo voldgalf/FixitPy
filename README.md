@@ -1,16 +1,11 @@
 # fixitPy
+![Static Badge](https://img.shields.io/badge/github-fixitpy-blue%3F?link=https%3A%2F%2Fgithub.com%2Fvoldgalf%2Ffixitpy)
+![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
+![Static Badge](https://img.shields.io/badge/coverage-100%25-orange)
 
-Interface with the iFixit API through Python, easily.
+Python iFixit API interface.
 
-### Current Features
-
-- Guide Retrieval
-
-### WIP Features
-
-- Guide image retrieval
-- text based searching for guides
-
+Currently you can retrieve guides and their prerequisite guides
 ## Installation
 
 To install fixitPy
