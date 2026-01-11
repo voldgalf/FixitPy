@@ -1,7 +1,7 @@
 Welcome to FixitPy's documentation!
 ===================================
 
-**FixitPy** is a uncomplicated Python library for interfacing with iFixit's API. Allowing repair guides to be programmatically retrieved.
+**FixitPy** is an uncomplicated Python library for interfacing with iFixit's API. Allowing repair guides to be programmatically retrieved.
 
 .. container:: sd-badges-inline
 
