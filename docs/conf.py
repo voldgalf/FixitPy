@@ -30,7 +30,7 @@ extensions = [
 html_theme_options = {
     #'logo': 'logo.png',
     'github_user': 'voldgalf',
-    'github_repo': 'fixitpy',
+    'github_repo': 'FixitPy',
     'description': 'A Python interface for the iFixit'
 }
 

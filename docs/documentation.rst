@@ -1,5 +1,5 @@
 Documentation
 =============
 
-.. autofunction:: fixitpy.retrieve_media
-.. autofunction:: fixitpy.retrieve_guide
+.. autofunction:: FixitPy.retrieve_media
+.. autofunction:: FixitPy.retrieve_guide

@@ -1,16 +1,16 @@
-Welcome to Fixitpy's documentation!
+Welcome to FixitPy's documentation!
 ===================================
 
-**fixitpy** is a Python library for interfacing with iFixit's API interface.
+**FixitPy** is a Python library for interfacing with iFixit's API interface.
 
 .. container:: sd-badges-inline
 
     .. shield::
         :label: Github
-        :message: Fixitpy
+        :message: FixitPy
         :color: darkcyan
         :logo: Github
-        :link: https://github.com/voldgalf/fixitpy
+        :link: https://github.com/voldgalf/FixitPy
         :link-type: url
 
     .. shield::
@@ -18,7 +18,7 @@ Welcome to Fixitpy's documentation!
         :message: PyPi
         :label-color: yellow
         :color: yellow
-        :link: https://pypi.org/project/fixitpy/
+        :link: https://pypi.org/project/FixitPy/
         :link-type: url
 
     .. shield::
@@ -30,11 +30,11 @@ Welcome to Fixitpy's documentation!
 Installation
 ------------
 
-To use fixitpy, first install it using pip:
+To use FixitPy, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install fixitpy
+   (.venv) $ pip install FixitPy
 
 
 .. toctree::

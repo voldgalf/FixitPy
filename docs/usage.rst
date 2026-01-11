@@ -3,20 +3,20 @@ Usage
 
 .. warning::
 
-   Remember to import fixitpy, as the example code assume it is already imported.
+   Remember to import FixitPy, as the example code assume it is already imported.
 
     .. code-block:: python
 
-        import fixitpy
+        import FixitPy
 
 Getting Guides
 --------------
 
-Retrieving a guide from iFixit with fixitpy is simple, just call `retrieve_guide` with your specified guide ID.
+Retrieving a guide from iFixit with FixitPy is simple, just call `retrieve_guide` with your specified guide ID.
 
 .. code-block:: python
 
-    guide = fixitpy.retrieve_guide(123)
+    guide = FixitPy.retrieve_guide(123)
     # 123 is an example and can be changed
 
 the returned ``guide`` is a dictionary object, and can be accessed similarly to the example below:
@@ -62,11 +62,11 @@ Below is an example of iterating through each guide step:
 Getting Media
 --------------
 
-Retrieving media from iFixit with fixitpy is simple, just call `retrieve_media` with your specified media ID.
+Retrieving media from iFixit with FixitPy is simple, just call `retrieve_media` with your specified media ID.
 
 .. code-block:: python
 
-    media = fixitpy.retrieve_media(123)
+    media = FixitPy.retrieve_media(123)
     # 123 is an example and can be changed
 
 the returned ``media`` is a dictionary object, and can be accessed similarly to the example below:
