@@ -31,7 +31,7 @@ html_theme_options = {
     #'logo': 'logo.png',
     'github_user': 'voldgalf',
     'github_repo': 'FixitPy',
-    'description': 'A Python interface for the iFixit API'
+    'description': "FixitPy is a uncomplicated Python library for interfacing with iFixit's API. Allowing repair guides to be programmatically retrieved."
 }
 
 templates_path = ['_templates']
