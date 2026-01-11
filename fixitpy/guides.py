@@ -7,14 +7,18 @@ import requests
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
 
 def retrieve_media(media_id: int) -> Optional[dict]:
-    """
-        Retrieve an iFixit media dictionary given the guide ID.
+    """Example function with types documented in the docstring.
 
-        Parameters:
-        media_id (int): The ID for the media requested.
+    Parameters
+    ----------
+    media_id : int
+        The ID for the media requested.
 
-        Returns:
-        dict: A dictionary containing the media data.
+    Returns
+    -------
+    dict
+        Contains information about the media.
+
     """
 
     request_url = f"{IFIXIT_API_URL}/media/images/{media_id}"
@@ -43,15 +47,20 @@ def retrieve_media(media_id: int) -> Optional[dict]:
     }
 
 def retrieve_guide(guide_id: int, get_prerequisites=False) -> Optional[dict]:
-    """
-        Retrieve an iFixit guide given the guide ID.
+    """Example function with types documented in the docstring.
 
-        Parameters:
-        guide_id (int): The ID for the guide requested.
-        get_prerequisites (bool): Whether to return a guide's prerequisites.
+    Parameters
+    ----------
+    guide_id : int
+        The ID for the guide requested.
+    get_prerequisites : bool
+        If True, return filled prerequisite dictionary.
 
-        Returns:
-        dict: A dictionary containing the guide data.
+    Returns
+    -------
+    dict
+        Contains information about the guide.
+
     """
 
     request_url = f"{IFIXIT_API_URL}/guides/{guide_id}"
@@ -95,3 +104,17 @@ def retrieve_guide(guide_id: int, get_prerequisites=False) -> Optional[dict]:
         "guide_id": response_json.get("guideid")
     }
 
+if __name__ == "__main__":
+
+    found_media = retrieve_media(14)
+    print(found_media)
+
+    found_guide = retrieve_guide(123,
+                                 get_prerequisites=True)  # call the retrieve_guide function which returns a dict
+
+    print(found_guide.get("title"))
+    print(found_guide.get("difficulty"))
+
+    for step in found_guide.get("steps"):
+        print(step.get("title"))
+        print(step.get("steps"))
