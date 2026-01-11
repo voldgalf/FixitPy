@@ -27,8 +27,6 @@ extensions = [
     "sphinx_design_elements",
 ]
 
-html_theme = 'sphinx_rtd_theme'
-
 templates_path = ['_templates']
 exclude_patterns = []
 
