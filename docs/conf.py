@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'FixitPy'
 copyright = '2026, Michael MacMullen'
 author = 'Michael MacMullen'
-release = '0.2.19'
+release = '0.2.21'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
