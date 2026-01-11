@@ -46,16 +46,13 @@ def retrieve_media(media_id: int) -> Optional[dict]:
         'sizes' : size_json,
     }
 
-def retrieve_guide(guide_id: int, get_prerequisites=False) -> Optional[dict]:
+def retrieve_guide(guide_id: int) -> Optional[dict]:
     """Example function with types documented in the docstring.
 
     Parameters
     ----------
     guide_id : int
         The ID for the guide requested.
-    get_prerequisites : bool
-        If True, return filled prerequisite dictionary.
-
     Returns
     -------
     dict
@@ -83,16 +80,9 @@ def retrieve_guide(guide_id: int, get_prerequisites=False) -> Optional[dict]:
             if _line.get('text_raw'):
                 lines.append(_line.get('text_raw'))
 
-        step_instance = {"title": _step.get('title'), "steps": lines}
+        step_instance = {"title": _step.get('title'), "text": " ".join(lines)}
         steps.append(step_instance)
 
-    prerequisites = []
-
-    if get_prerequisites:
-
-        for _prerequisite in response_json.get('prerequisites', []):
-            guide = retrieve_guide(_prerequisite.get('guideid'), get_prerequisites=False)
-            prerequisites.append(guide)
 
     return {
         "title": response_json.get("title"),
@@ -100,7 +90,6 @@ def retrieve_guide(guide_id: int, get_prerequisites=False) -> Optional[dict]:
         "conclusion": response_json.get("conclusion_raw"),
         "difficulty": response_json.get("difficulty"),
         "introduction": response_json.get("introduction_raw"),
-        "prerequisites": prerequisites,
         "guide_id": response_json.get("guideid")
     }
 
@@ -109,12 +98,11 @@ if __name__ == "__main__":
     found_media = retrieve_media(14)
     print(found_media)
 
-    found_guide = retrieve_guide(123,
-                                 get_prerequisites=True)  # call the retrieve_guide function which returns a dict
+    found_guide = retrieve_guide(123)  # call the retrieve_guide function which returns a dict
 
     print(found_guide.get("title"))
     print(found_guide.get("difficulty"))
 
     for step in found_guide.get("steps"):
         print(step.get("title"))
-        print(step.get("steps"))
+        print(step.get("text"))

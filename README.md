@@ -14,52 +14,47 @@ Currently, you can retrieve guides and their prerequisite guides
 pip install fixitpy
 ````
 
-## Using the library
+## Usage
 
-### Retrieving a guide *without prerequisites*
-
-This returns a dict that contains information pertaining to the guide
+### Guide retrieval
 
 ````py
 import fixitpy
 
-found_guide = fixitpy.retrieve_guide(123) # call the retrieve_guide function which returns a dict
+# Call 'retrieve_guide' returns the guide's dictionary
+found_guide = fixitpy.retrieve_guide(123)
 
-print(found_guide.get("title"))
-print(found_guide.get("difficulty"))
-````
-
-### Retrieving a guide *with prerequisites*
-
-A prerequisite is an optional guide that the retrieved guide recommends you start with before. The prerequisite guide is the same dict structure of what returns from `fixitpy.retrieve_guide`
-
-````py
-import fixitpy
-
-found_guide = fixitpy.retrieve_guide(123, get_prerequisites=True) # call the retrieve_guide function which returns a dict
-
+# As any regular dictionary, you can retrieve specific values from it
 print(found_guide.get("title"))
 print(found_guide.get("difficulty"))
 
-first_prerequisite = found_guide.get("prerequisites")[0]
-print(first_prerequisite.get("title"))
-````
-
-### Getting Guide Steps
-
-What makes a repair guide, a *guide* is the inclusion of steps to follow.
-
-````py
-import fixitpy
-
-found_guide = fixitpy.retrieve_guide(123) # call the retrieve_guide function which returns a dict
-
-print(found_guide.get("title"))
-print(found_guide.get("difficulty"))
-
+# The dictionary returned from 'retrieve_guide' contains a list refered to as 'steps'
+# Each list item contains a dictionary with the properties 'title', which is self explanatory and 'text', the process itself.
 for step in found_guide.get("steps"):
-    print(step.get("title")) # this is the title of each step
-    print(step.get("steps")) # this is a list of each sentence of the current step
+    print(step.get("title"))
+    print(step.get("text"))
+
+````
+
+### Media retrieval
+
+````py
+import fixitpy
+
+# Call 'retrieve_media', returns the media's dictionary
+found_guide = fixitpy.retrieve_media(123)
+
+# As any regular dictionary, you can retrieve specific values from it
+print(found_guide.get("width"))
+print(found_guide.get("height"))
+
+# The dictionary returned from 'retrieve_media' contains a sub-dictionary under 'sizes'
+# Which contains all the sizes of the media and their corresponding URLs.
+sizes = found_guide.get("sizes")
+
+# 'thumbnail' is a very common size for iFixit Media
+print(sizes.get("thumbnail"))
+
 ````
 
 # License
