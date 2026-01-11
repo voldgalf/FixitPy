@@ -5,7 +5,6 @@ Welcome to Fixitpy's documentation!
 
 .. container:: sd-badges-inline
 
-
     .. shield::
         :label: Github
         :message: Fixitpy
