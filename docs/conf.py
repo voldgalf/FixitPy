@@ -28,7 +28,7 @@ extensions = [
 ]
 
 html_theme_options = {
-    #'logo': 'logo.png',
+    'logo': 'logo.png',
     'github_user': 'voldgalf',
     'github_repo': 'FixitPy',
     'description': "FixitPy is a uncomplicated Python library for interfacing with iFixit's API. Allowing repair guides to be programmatically retrieved."
