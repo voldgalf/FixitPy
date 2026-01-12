@@ -95,7 +95,7 @@ The ``media`` dictionary does not contain the images themselves, but the URLs as
 
 .. warning::
 
-    ``sizes`` is not rigid, and the available image sizes with vary, with some exceptions.
+    ``sizes`` is not rigid, and the available image sizes will vary, with some exceptions.
 
 .. code-block:: python
     :linenos:
