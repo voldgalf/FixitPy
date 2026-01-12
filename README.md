@@ -1,8 +1,6 @@
-# FixitPy
-
-<div style="width: 50%;margin: 0 auto;">
-
-<img src="logo.png" alt="Alt Text" width=78%>
+<div align="center">
+<img src="logo.png" alt="Alt Text" width=50%>
+</div>
 
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/voldgalf/fixitpy)
 ![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
@@ -11,8 +9,6 @@
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/50calibursword)
 [![Static Badge](https://img.shields.io/badge/Documentation-blue)](https://fixitpy.readthedocs.io/en/latest/)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/fixitpy)
-
-</div>
 
 FixitPy is an uncomplicated Python library for interfacing with iFixit's API.
 
