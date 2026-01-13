@@ -7,7 +7,7 @@ Usage
 
     .. code-block:: python
 
-        import FixitPy
+        import fixitpy
 
 Getting Guides
 --------------
@@ -16,7 +16,7 @@ Retrieving a guide from iFixit with FixitPy is simple, just call `retrieve_guide
 
 .. code-block:: python
 
-    guide = FixitPy.retrieve_guide(123)
+    guide = fixitpy.retrieve_guide(123)
     # 123 is an example and can be changed
 
 the returned ``guide`` is a dictionary object, and can be accessed similarly to the example below:
@@ -66,7 +66,7 @@ Retrieving media from iFixit with FixitPy is simple, just call `retrieve_media` 
 
 .. code-block:: python
 
-    media = FixitPy.retrieve_media(123)
+    media = fixitpy.retrieve_media(123)
     # 123 is an example and can be changed
 
 the returned ``media`` is a dictionary object, and can be accessed similarly to the example below:
